@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Leandro</title>
+    
+    <!-- Tailwind CSS desde CDN para estilos rápidos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // Un azul vibrante
+                        secondary: '#1e293b', // Un gris muy oscuro para fondos
+                        accent: '#10b981', // Verde para detalles de éxito/links
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Phosphor (ligeros y modernos) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 de Tailwind */
+            color: #f8fafc; /* Slate 50 de Tailwind */
+            scroll-behavior: smooth;
+        }
+
+        /* Animación suave para la aparición de elementos */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Retrasos escalonados para las animaciones */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        /* Efecto hover brillante para las tarjetas de proyecto */
+        .project-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            transition: all 0.5s ease;
+        }
+
+        .project-card:hover::before {
+            left: 150%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-primary selection:text-white">
+
+    <!-- Sección Hero -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Decoración de fondo abstracto -->
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+            <div class="absolute top-0 right-1/4 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-32 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-slate-800 text-primary text-sm font-semibold tracking-wider mb-6 fade-in-up">
+                DESARROLLADOR WEB
+            </span>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 fade-in-up delay-100">
+                Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Leandro</span>
+            </h1>
+            <p class="mt-4 text-xl text-slate-400 max-w-2xl mx-auto mb-10 fade-in-up delay-200">
+                Creo soluciones prácticas y eficientes. Bienvenido a mi portafolio, donde muestro los proyectos en los que he estado trabajando.
+            </p>
+            <div class="flex justify-center gap-4 fade-in-up delay-300">
+                <a href="#proyectos" class="px-8 py-3 rounded-lg bg-primary hover:bg-blue-600 text-white font-medium transition-colors shadow-lg shadow-blue-500/30 flex items-center gap-2">
+                    Ver Proyectos <i class="ph ph-arrow-down"></i>
+                </a>
+                <a href="https://github.com/leoacg25" target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium transition-colors border border-slate-700 flex items-center gap-2">
+                    <i class="ph ph-github-logo text-xl"></i> Mi GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Proyectos -->
+    <main id="proyectos" class="flex-grow container mx-auto px-6 py-20 relative z-10">
+        <div class="flex items-center justify-between mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold flex items-center gap-3">
+                <i class="ph ph-code text-primary"></i> Mis Proyectos
+            </h2>
+            <div class="h-px bg-slate-800 flex-grow ml-8 hidden sm:block"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Proyecto 2: BajuShop (El mejorado primero) -->
+            <article class="project-card bg-secondary border border-slate-700 rounded-2xl p-1 flex flex-col h-full fade-in-up delay-100">
+                <div class="bg-slate-900 rounded-xl p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-primary/10 rounded-lg text-primary">
+                            <i class="ph ph-storefront text-3xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-bold rounded-full border border-accent/30">
+                            Offline-First / Sync
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-3">BajuShop v2</h3>
+                    
+                    <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                        Versión mejorada de mi sistema de inventario. Destaca por su capacidad <strong>Offline-First</strong>: permite seguir trabajando sin conexión a internet y sincroniza automáticamente los datos con una base de datos JSON alojada en GitHub en cuanto recupera la conexión.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">HTML/CSS/JS</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Local Storage</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">GitHub API (JSON Sync)</span>
+                    </div>
+                    
+                    <div class="flex gap-4 mt-auto pt-4 border-t border-slate-800">
+                        <a href="https://leoacg25.github.io/negocio/bajushop.html" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
+                            <i class="ph ph-arrow-square-out"></i> Ver Proyecto en Vivo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 1: Inventario Básico -->
+            <article class="project-card bg-secondary border border-slate-700 rounded-2xl p-1 flex flex-col h-full fade-in-up delay-200">
+                <div class="bg-slate-900 rounded-xl p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-slate-800 rounded-lg text-slate-300">
+                            <i class="ph ph-package text-3xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs font-bold rounded-full border border-slate-700">
+                            Versión Inicial
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-3">Inventario y Ventas Simples</h3>
+                    
+                    <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                        Mi primer proyecto de gestión. Es un manejador de inventario básico diseñado para llevar un control sencillo de productos y registrar ventas de manera rápida y directa. Sirvió como base para aprender sobre manejo de estado en el cliente.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">HTML/CSS/JS</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Lógica de Negocio</span>
+                    </div>
+                    
+                    <div class="flex gap-4 mt-auto pt-4 border-t border-slate-800">
+                        <a href="https://leoacg25.github.io/tienda/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
+                            <i class="ph ph-arrow-square-out"></i> Ver Proyecto en Vivo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+        
+        <!-- Sección de Próximos Proyectos (Placeholder opcional) -->
+        <div class="mt-16 text-center p-8 border border-dashed border-slate-700 rounded-2xl bg-slate-800/30 fade-in-up delay-300">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 mb-4">
+                <i class="ph ph-hammer text-xl text-slate-400"></i>
+            </div>
+            <h4 class="text-lg font-medium text-slate-300 mb-2">Más proyectos en camino</h4>
+            <p class="text-sm text-slate-500">Constantemente aprendiendo y desarrollando nuevas herramientas.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-secondary/50 backdrop-blur-sm mt-auto relative z-10">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-white">L</div>
+                <span class="font-semibold text-slate-300">Leandro</span>
+            </div>
+            
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="year"></span> Construido para mi currículum.
+            </p>
+            
+            <div class="flex gap-4">
+                <a href="https://github.com/leoacg25" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub">
+                    <i class="ph ph-github-logo text-2xl"></i>
+                </a>
+                <!-- Puedes añadir más enlaces aquí, como LinkedIn -->
+                <!-- <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph ph-linkedin-logo text-2xl"></i></a> -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Actualizar el año del footer automáticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Configuración para animaciones al hacer scroll (Intersection Observer)
+        // Aunque ya tienen animación de entrada, esto asegura que se animen si 
+        // estuvieran más abajo en la página y requirieran scroll para verse.
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Si el elemento es visible, nos aseguramos de que su animación se reproduzca
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Si tienes elementos fuera de la vista inicial que quieres animar al hacer scroll
+        // document.querySelectorAll('.fade-in-up').forEach(el => {
+        //     el.style.animationPlayState = 'paused'; // Pausar inicialmente
+        //     observer.observe(el);
+        // });
+    </script>
+</body>
+</html>
