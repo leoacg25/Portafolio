@@ -129,63 +129,138 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            <!-- Proyecto 2: BajuShop (El mejorado primero) -->
+            <!-- Proyecto 1: Restaurante (Firebase) -->
             <article class="project-card bg-secondary border border-slate-700 rounded-2xl p-1 flex flex-col h-full fade-in-up delay-100">
                 <div class="bg-slate-900 rounded-xl p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-start mb-4">
                         <div class="p-3 bg-primary/10 rounded-lg text-primary">
-                            <i class="ph ph-storefront text-3xl"></i>
+                            <i class="ph ph-fork-knife text-3xl"></i>
                         </div>
                         <span class="px-3 py-1 bg-accent/20 text-accent text-xs font-bold rounded-full border border-accent/30">
-                            Offline-First / Sync
+                            Firebase / Multiusuario
                         </span>
                     </div>
-                    
-                    <h3 class="text-2xl font-bold text-white mb-3">BajuShop v2</h3>
-                    
+                    <h3 class="text-2xl font-bold text-white mb-3">Gestión de Restaurante</h3>
                     <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
-                        Versión mejorada de mi sistema de inventario. Destaca por su capacidad <strong>Offline-First</strong>: permite seguir trabajando sin conexión a internet y sincroniza automáticamente los datos con una base de datos JSON alojada en GitHub en cuanto recupera la conexión.
+                        Sistema integral para restaurantes con integración a <strong>Firebase</strong>. Cuenta con sistema multiusuario con roles de seguridad (supervisor y cajero). Permite la programación de recetas, gestión de artículos y actualización automática de precios mediante la tasa oficial del BCV.
                     </p>
-                    
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">HTML/CSS/JS</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Local Storage</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">GitHub API (JSON Sync)</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Firebase Auth/DB</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">API BCV</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Gestión de Roles</span>
                     </div>
-                    
                     <div class="flex gap-4 mt-auto pt-4 border-t border-slate-800">
-                        <a href="https://leoacg25.github.io/negocio/bajushop.html" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
+                        <a href="https://leoacg25.github.io/Restaurante/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 bg-primary/10 hover:bg-primary/20 text-primary font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
                             <i class="ph ph-arrow-square-out"></i> Ver Proyecto en Vivo
                         </a>
                     </div>
                 </div>
             </article>
 
-            <!-- Proyecto 1: Inventario Básico -->
+            <!-- Proyecto 2: Tienda Completa -->
             <article class="project-card bg-secondary border border-slate-700 rounded-2xl p-1 flex flex-col h-full fade-in-up delay-200">
                 <div class="bg-slate-900 rounded-xl p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-start mb-4">
                         <div class="p-3 bg-slate-800 rounded-lg text-slate-300">
-                            <i class="ph ph-package text-3xl"></i>
+                            <i class="ph ph-shopping-cart text-3xl"></i>
                         </div>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs font-bold rounded-full border border-slate-700">
-                            Versión Inicial
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full border border-blue-500/30">
+                            Offline-First / PWA
                         </span>
                     </div>
-                    
-                    <h3 class="text-2xl font-bold text-white mb-3">Inventario y Ventas Simples</h3>
-                    
+                    <h3 class="text-2xl font-bold text-white mb-3">Punto de Venta Avanzado</h3>
                     <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
-                        Mi primer proyecto de gestión. Es un manejador de inventario básico diseñado para llevar un control sencillo de productos y registrar ventas de manera rápida y directa. Sirvió como base para aprender sobre manejo de estado en el cliente.
+                        Aplicación de tienda altamente funcional capaz de trabajar <strong>sin conexión a internet</strong>. Incluye un potente motor de reglas de negocio: descuentos por volumen, creación de combos, reportes estadísticos de ventas y sincronización en tiempo real con la tasa del BCV.
                     </p>
-                    
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">HTML/CSS/JS</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">PWA Offline</span>
                         <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Lógica de Negocio</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Reportes</span>
                     </div>
-                    
                     <div class="flex gap-4 mt-auto pt-4 border-t border-slate-800">
                         <a href="https://leoacg25.github.io/tienda/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
+                            <i class="ph ph-arrow-square-out"></i> Ver Proyecto en Vivo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 3: App de Rifas -->
+            <article class="project-card bg-secondary border border-slate-700 rounded-2xl p-1 flex flex-col h-full fade-in-up delay-300">
+                <div class="bg-slate-900 rounded-xl p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-slate-800 rounded-lg text-slate-300">
+                            <i class="ph ph-ticket text-3xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full border border-purple-500/30">
+                            Integración API / Scraping
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Plataforma de Rifas</h3>
+                    <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                        Sistema para la gestión y venta de talonarios virtuales dinámicos y personalizables. Su principal característica es la <strong>integración automatizada</strong> con Tripletachira para la verificación y obtención de resultados ganadores en tiempo real.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Consumo de APIs</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Gestión de Sorteos</span>
+                    </div>
+                    <div class="flex gap-4 mt-auto pt-4 border-t border-slate-800">
+                        <a href="https://leoacg25.github.io/rifa/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
+                            <i class="ph ph-arrow-square-out"></i> Ver Proyecto en Vivo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 4: Pescadería APK -->
+            <article class="project-card bg-secondary border border-slate-700 rounded-2xl p-1 flex flex-col h-full fade-in-up delay-100">
+                <div class="bg-slate-900 rounded-xl p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-slate-800 rounded-lg text-slate-300">
+                            <i class="ph ph-device-mobile text-3xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-bold rounded-full border border-orange-500/30">
+                            App Android (.APK)
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">App Móvil para Pescadería</h3>
+                    <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                        Aplicación nativa para dispositivos Android desarrollada a la medida. Incorpora lectura de <strong>códigos de barras</strong> y un sistema robusto para el manejo de inventario tanto de artículos simples como fraccionados (venta por peso exacto).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Android</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Códigos de Barras</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Gestión por Peso</span>
+                    </div>
+                    <div class="flex gap-4 mt-auto pt-4 border-t border-slate-800">
+                        <a href="https://github.com/leoacg25/app_pescaderia.git" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
+                            <i class="ph ph-github-logo"></i> Ver Repositorio GitHub
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 5: VirgiShop -->
+            <article class="project-card bg-secondary border border-slate-700 rounded-2xl p-1 flex flex-col h-full fade-in-up delay-200 lg:col-span-2 xl:col-span-1">
+                <div class="bg-slate-900 rounded-xl p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-slate-800 rounded-lg text-slate-300">
+                            <i class="ph ph-t-shirt text-3xl"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs font-bold rounded-full border border-slate-700">
+                            Almacenamiento Local
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">VirgiShop: Gestor Local</h3>
+                    <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                        Sistema de punto de venta optimizado para tiendas de ropa que operan en entornos cerrados. Funciona de manera <strong>100% offline y local</strong>, garantizando respuestas ultrarrápidas y privacidad total de la información de inventario y caja.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Local Storage</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-md text-xs text-slate-300 font-medium">Inventario Rápido</span>
+                    </div>
+                    <div class="flex gap-4 mt-auto pt-4 border-t border-slate-800">
+                        <a href="https://leoacg25.github.io/virgishop/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors flex justify-center items-center gap-2">
                             <i class="ph ph-arrow-square-out"></i> Ver Proyecto en Vivo
                         </a>
                     </div>
